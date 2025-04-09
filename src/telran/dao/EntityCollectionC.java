@@ -11,12 +11,13 @@ public class EntityCollectionC implements EntityCollection {
 
     //O(n)
     @Override
-    public void add(Entity entity) {
+    public boolean add(Entity entity) {
         int index = 0;
         while (index < entities.size() && entity.compareTo(entities.get(index)) < 0) {
             index++;
         }
         entities.add(index, entity);
+        return true;
     }
 
     //O(1)

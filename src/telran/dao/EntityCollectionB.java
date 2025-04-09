@@ -9,8 +9,8 @@ public class EntityCollectionB implements EntityCollection {
 
     //O(log n)
     @Override
-    public void add(Entity entity) {
-        entities.add(entity);
+    public boolean add(Entity entity) {
+       return entities.add(entity);
     }
 
     //O(log n)

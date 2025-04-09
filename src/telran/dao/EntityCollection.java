@@ -4,7 +4,8 @@ import telran.model.Entity;
 
 
 public interface EntityCollection {
-    void add(Entity entity);
+
+    boolean add(Entity entity);
 
     Entity removeMaxValue();
 }

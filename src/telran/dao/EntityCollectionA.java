@@ -13,11 +13,15 @@ public class EntityCollectionA implements EntityCollection {
 
     //O(1)
     @Override
-    public void add(Entity entity) {
-        entities.add(entity);
-        if (maxEntity == null || entity.compareTo(maxEntity) > 0) {
-            maxEntity = entity;
+    public boolean add(Entity entity) {
+        if (entities.contains(entity)) {
+            entities.add(entity);
+            if (maxEntity == null || entity.compareTo(maxEntity) > 0) {
+                maxEntity = entity;
+            }
+            return true;
         }
+        return false;
     }
 
     //O(n)
